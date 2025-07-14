@@ -14,10 +14,13 @@ public:
 
 void print_link_list(Node* head) {
     Node* temp = head;
+    int count = 0;
     while (temp != NULL) {
+        count++;
         cout << temp->val << endl;
         temp = temp->next;
     }
+    cout << "Size of linked list: " << count << endl;
 }
 
 int main() {

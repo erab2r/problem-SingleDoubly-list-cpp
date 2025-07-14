@@ -24,6 +24,9 @@ void insert_at_anypos(Node* &head,int idx,int val){
     Node*temp = head;
     for(int i =1;i<idx;i++){
         temp = temp->next;
+        if(temp == NULL){
+            return;
+        }
     }
     newNode->next = temp->next;
     temp->next = newNode;
@@ -37,7 +40,7 @@ int main() {
     Node* tail = new Node(50);
     head->next = a;
     a->next = tail;
-   insert_at_anypos(head,2,100);    
+   insert_at_anypos(head,10,100);    
 
     print_link_list(head);
     return 0;

@@ -1,4 +1,5 @@
-30
+10
 20
-100
-50
+30
+40
+Size of linked list: 4
