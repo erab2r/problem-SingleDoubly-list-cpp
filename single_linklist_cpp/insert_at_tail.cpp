@@ -19,14 +19,15 @@ void print_link_list(Node* head) {
         temp = temp->next;
     }
 }
-void insert_at_head(Node* &head,int val){
+void insert_at_tail(Node* &head,Node* &tail,int val){
     Node* newNode = new Node(val);
     if(head == NULL){
         head = newNode;
+        tail = newNode;
         return;
     }
-    newNode->next = head;
-    head = newNode;
+    tail->next = newNode;
+    tail = newNode;
 }
 
 int main() {
@@ -35,7 +36,7 @@ int main() {
     Node* tail = new Node(50);
     head->next = a;
     a->next = tail;
-    insert_at_head(head,100);    
+    insert_at_tail(head,tail,100);    
 
     print_link_list(head);
     return 0;
